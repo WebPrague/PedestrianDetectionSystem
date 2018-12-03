@@ -7,7 +7,7 @@ import threading
 import time
 from PIL import Image
 
-RTMP_HOST = '183.175.12.160'
+RTMP_HOST = 'xx.xx.xx.xx'
 
 rtmpUrl = 'rtmp://' + RTMP_HOST + ':1935/live/stream'
 od = OD()
