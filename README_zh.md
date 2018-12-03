@@ -22,5 +22,7 @@
 | 依赖项 | 安装方式 |
 | ---------- | ------ |
 | Python3.5 | 略 |
+| pip | 略 |
 | TensorFlow-1.11.0-GPU | [安装流程](https://hupeng.me/articles/48.html) |
 | Python版本OpenCV | [安装流程](https://hupeng.me/articles/49.html) |
+| requests | pip3 install requests |
