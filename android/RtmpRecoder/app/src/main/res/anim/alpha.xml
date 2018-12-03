@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    alpha表示渐变动画
+    duration设置动画播放时长
+    fromAlpha表示动画开始时的透明度
+    toAlpha表示动画结束时的透明度
+      （0表示完全透明 1表示完全不透明）
+ -->
+<alpha xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="4000"
+    android:fromAlpha="0.3"
+    android:toAlpha="1" />

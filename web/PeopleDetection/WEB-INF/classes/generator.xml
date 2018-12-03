@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+    <properties resource="generator.properties" />
+
+    <classPathEntry location="D:\repository\mysql\mysql-connector-java\5.1.41\mysql-connector-java-5.1.41.jar" />
+
+    <context id="contex1">
+        <commentGenerator>
+            <property name="suppressAllComments" value="true" /><!-- 是否取消注释 -->
+            <property name="suppressDate" value="true" /> <!-- 是否生成注释代时间戳 -->
+        </commentGenerator>
+
+        <jdbcConnection driverClass="${driver}" connectionURL="${url}" userId="${username}" password="${password}" />
+
+        <javaTypeResolver>
+            <!-- 是否使用bigDecimal， false可自动转化以下类型（Long, Integer, Short, etc.） -->
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="${modelPackage}" targetProject="${modelProject}" />
+        <sqlMapGenerator targetPackage="${sqlPackage}" targetProject="${sqlProject}" />
+        <javaClientGenerator targetPackage="${mapperPackage}" targetProject="${mapperProject}" type="XMLMAPPER"/>
+
+        <table schema="" tableName="${table}" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>
+    </context>
+</generatorConfiguration>
+
