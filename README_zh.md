@@ -32,16 +32,4 @@
 
 
 运行系统：
-我们使用Tensorflow深度学习框架来训练一个行人检测的模型，整个过程可以被归纳为3个阶段：
-- 数据准备
-过去拍摄的监控录像可能是你可以获得的最准确的数据集。但是摄像机中的图像质量可能较低。一种巧妙的方法是使用[数据扩充](https://medium.com/nanonets/how-to-use-deep-learning-when-you-have-limited-data-part-2-data-augmentation-c26971dc8ced)。本质上说，我们必须添加一些噪音来降低数据集中图片的质量。我们还可以尝试模糊和侵蚀效果。为了目标检测任务，我们将使用 [TownCentre 数据集
-](https://pan.baidu.com/s/1lwlmsr16v2eOtlzDPGMlIw)。我们将使用视频的前 3600 帧进行训练和验证，剩下的 900 帧用来测试。
-- 训练模型
-我们使用迁移学习来训练一个目标检测器，采用ResNet50的FasterRCNN结构的神经网络作为预训练模型，并在此模型上进行微调。建议使用 GPU 足够大的机器（假设你安装了 TensorFlow 的 GPU 版本）以加速训练过程。
-- 模型推理
-导出训练模型，也就是在python目录下的名为 frozen_inference_graph.pb 的文件，得到训练好的模型。
-
-
-
-
 
