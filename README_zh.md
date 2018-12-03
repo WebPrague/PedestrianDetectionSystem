@@ -17,7 +17,7 @@
 | GPU | NVIDIA GTX1080以上 |
 
 ## 2.基于TensorFlow平台的行人检测系统
-本项目依赖如下：
+本系统依赖如下：
 
 | 依赖项 | 安装方式 |
 | ---------- | ------ |
@@ -26,3 +26,8 @@
 | TensorFlow-1.11.0-GPU | [安装流程](https://hupeng.me/articles/48.html) |
 | Python版本OpenCV | [安装流程](https://hupeng.me/articles/49.html) |
 | requests | pip3 install requests |
+| frozen_inference_graph.pb | [下载地址](https://download.csdn.net/download/huplion/10825557) |
+| Nginx with RTMP | [安装流程](https://www.jianshu.com/p/b4ee6956d1ea) |
+
+
+运行系统：
