@@ -157,4 +157,4 @@ push_thread = PushThread()
 push_thread.start()
 
 get_channel_thread = GetChannelThread()
-get_channel_thread.start()
+#get_channel_thread.start()
