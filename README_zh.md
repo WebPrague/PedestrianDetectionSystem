@@ -31,7 +31,8 @@
 | Nginx with RTMP | [安装流程](https://www.jianshu.com/p/b4ee6956d1ea) |
 
 运行系统：
-- 把训练模型后得到的`.pb`模型文件复制在`python`目录下，运行`main.py`；
+- 把训练模型后得到的`.pb`模型文件复制在`python`目录下；
+- 修改`main.py`文件`RTMP_HOST`变量，运行`main.py`；
 
 ## 3.基于Android平台的推流系统
 
