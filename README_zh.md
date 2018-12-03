@@ -24,8 +24,8 @@
 | ---------- | ------ |
 | Python3.5 | 略 |
 | pip | 略 |
-| TensorFlow-1.11.0-GPU | [安装流程](https://hupeng.me/articles/48.html) |
-| Python版本OpenCV | [安装流程](https://hupeng.me/articles/49.html) |
+| TensorFlow-1.11.0-GPU | 略 |
+| Python版本OpenCV | 略 |
 | requests | pip3 install requests |
 | frozen_inference_graph.pb | [下载地址](https://download.csdn.net/download/huplion/10825557) |
 | Nginx with RTMP | [安装流程](https://www.jianshu.com/p/b4ee6956d1ea) |
