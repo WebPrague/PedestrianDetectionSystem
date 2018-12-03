@@ -8,7 +8,7 @@
 - 3.基于JavaWeb的展示系统
 
 # 0x01 服务器部署
-## 服务器的配置要求
+## 1.服务器的配置要求
 | 配置        | 基本要求 |
 | ---------- | ------- |
 | 操作系统 | Ubuntu 16.04 x64 |
@@ -16,11 +16,11 @@
 | 内存 | 8G以上 |
 | GPU | NVIDIA GTX1080以上 |
 
-### 基于TensorFlow平台的行人检测系统
+## 2.基于TensorFlow平台的行人检测系统
 本项目依赖如下：
 
-| 依赖项  |
-| ---------- |
-| Python3.5 |
-| TensorFlow-1.11.0-GPU |
-| Python版本OpenCV |
+| 依赖项 | 安装方式 |
+| ---------- | ------ |
+| Python3.5 | 略 |
+| TensorFlow-1.11.0-GPU | [安装流程](https://hupeng.me/articles/48.html) |
+| Python版本OpenCV | [安装流程](https://hupeng.me/articles/49.html) |
