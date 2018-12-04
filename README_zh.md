@@ -40,7 +40,7 @@
 
 运行系统
 
-- 在Idea或者AndroidStudio中导入`androidStudio`目录下的工程，并修改`MainActivity.java`中的静态变量；
+- 在Idea或者AndroidStudio中导入`android`目录下的工程，并修改`MainActivity.java`中的静态变量；
 
 
 ## 4.基于SSM(SpringMVC+Spring+Mybatis)互联网轻量级框架的展示系统
