@@ -40,7 +40,7 @@
 
 ## 3.基于Android平台的推流系统
 
-运行系统
+运行系统：
 
 - 在Idea或者AndroidStudio中导入`android`目录下的工程，并修改`MainActivity.java`中的静态变量；
 
@@ -64,7 +64,7 @@
 
 <img src="https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/example1.png" width="700" height="400">
 
-- 展示行人检测项目完整效果，[点击此链接](https://pan.baidu.com/s/1X7BX5QSbqZFx2Y6XElW4ZA)
+- 展示行人检测项目完整效果，[点击此链接](https://pan.baidu.com/s/1X7BX5QSbqZFx2Y6XElW4ZA)；
 
 # 0x03 关于
 
