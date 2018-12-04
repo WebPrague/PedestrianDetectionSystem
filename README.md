@@ -2,6 +2,7 @@
 [中文文档](https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/blob/master/README_zh.md)<br>
 
 Monitoring plays an important role in security and inspections, but it is also a very tedious task. The emergence of deep learning has liberated humans from this task to some extent. This project builds a simple and effective monitoring system based on the goal detection of deep learning, which can automate the flow statistics and pedestrian detection. 
+
 **This system is based on the Apache2.0 protocol open source, please strictly abide by the open source agreement.**
 
 # 0x00 Introduction
@@ -63,4 +64,4 @@ How to run the system：
 # 0x03 About
 
 - How to support the author: Click on **star** button in the upper right corner is the maximum support of the author；
-- If you have questions or discuss the pedestrian detection algorithm model, please submit an issue,Thanks;
+- If you have questions or discuss the pedestrian detection algorithm model, please submit an issue,thanks;
