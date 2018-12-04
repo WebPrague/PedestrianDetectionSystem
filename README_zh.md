@@ -58,7 +58,7 @@
 
 # 0x02 项目展示
 
-![](https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/example2.png)
+![](https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/example2.jpg)
 
 ![](https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/example1.png)
 - 展示行人检测项目完整效果，[点击此链接](https://pan.baidu.com/s/1X7BX5QSbqZFx2Y6XElW4ZA)
