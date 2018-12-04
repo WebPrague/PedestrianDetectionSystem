@@ -1,3 +1,5 @@
+![](https://img.shields.io/badge/License-Apache%202-yellow.svg)
+
 # PedestrianDetectionSystem
 [中文文档](https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/blob/master/README_zh.md)<br>
 
