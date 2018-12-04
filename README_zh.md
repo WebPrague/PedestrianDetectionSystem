@@ -1,5 +1,7 @@
 ![](https://img.shields.io/badge/License-Apache%202-yellow.svg)
 # 行人检测系统
+[English Document](https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/blob/master/README.md)
+
 监控在安保和巡查中发挥着重要作用，但也是一项非常乏味的任务，深度学习的出现在一定程度上将人类从这一任务中解放出来。本项目基于深度学习的目标检测去搭建了一个简单有效的监控系统，能够自动化进行人流统计和行人检测。
 
 **本系统基于Apache2.0协议开源，请严格遵守开源协议。**
@@ -58,9 +60,10 @@
 
 # 0x02 项目展示
 
-![](https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/example2.jpg)
+<img src="https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/example2.jpg" width="600" height="300">
 
-![](https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/example1.png)
+<img src="https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/example1.png" width="700" height="400">
+
 - 展示行人检测项目完整效果，[点击此链接](https://pan.baidu.com/s/1X7BX5QSbqZFx2Y6XElW4ZA)
 
 # 0x03 关于
