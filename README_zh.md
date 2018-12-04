@@ -63,7 +63,7 @@
 # 0x03 关于
 
 - 如何支持作者：点击右上角的"star" 的按钮，是对作者的最大支持；
-- 如有问题或者讨论行人检测算法模型，请提交issue;
+- 如有问题或者讨论行人检测算法模型，请[提交issue](https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/issues/new);
 
 
 
