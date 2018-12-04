@@ -162,7 +162,6 @@
             <div class="inp"><input type="text" name="username" placeholder="用户名"></div>
             <div class="inp"><input type="password" name="password" placeholder="密码"></div>
             <input class="login" type="submit" onclick="login()" value="登录"/>
-            <div id="bottom"><a id="forgotpassword" onclick="forgetPassword()">忘记密码？</a></div>
         </form>
     </div>
     <div id="registered-content">
@@ -179,10 +178,6 @@
 
 <canvas id="Mycanvas"></canvas>
 <script>
-
-    function forgetPassword(){
-        window.alert("跳转找回密码...")
-    }
 
     function login() {
         login_form = document.getElementById('login_form');

@@ -216,20 +216,20 @@
 
 
     <script>
-        // function reloadView(){
-        //     $.ajax({
-        //         type: "post",
-        //         async: true,
-        //         url: "http://127.0.0.1:8080/getPeopleNumber",
-        //         success:function (data) {
-        //             $("#number").html(data);
-        //         },
-        //         error: function (jqObj) {
-        //             console.log(jqObj.status)
-        //         }
-        //     });
-        // }
-        //setInterval('reloadView()', 2000); //每2秒刷新一次页面下边显示的数据
+        function reloadView(){
+            $.ajax({
+                type: "post",
+                async: true,
+                url: "/PeopleDetection/getPeopleNumber",
+                success:function (data) {
+                    $("#number").html(data);
+                },
+                error: function (jqObj) {
+                    console.log(jqObj.status)
+                }
+            });
+        }
+        setInterval('reloadView()', 2000); //每2秒刷新一次页面下边显示的数据
         
         Holder.addTheme('thumb', {
             bg: '#55595c',
@@ -239,23 +239,23 @@
     </script>
 
     <script>
-        // function set_channel(x) {
-        //     $.ajax({
-        //         url: 'http:183.175.12.160:8080/set_channel',
-        //         type: 'GET',
-        //         data: 'use_channel=' + x,
-        //         async: true,
-        //         cache: false,
-        //         contentType: false,
-        //         processData: false,
-        //         success: function (returndata) {
-        //             alert('切换成功！');
-        //         },
-        //         error: function (returndata) {
-        //             alert('请求发送失败');
-        //         }
-        //     });
-        // }
+        function set_channel(x) {
+            $.ajax({
+                url: '/PeopleDetection/set_channel',
+                type: 'GET',
+                data: 'use_channel=' + x,
+                async: true,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (returndata) {
+                    alert('切换成功！');
+                },
+                error: function (returndata) {
+                    alert('请求发送失败');
+                }
+            });
+        }
     </script>
 </body>
 </html>

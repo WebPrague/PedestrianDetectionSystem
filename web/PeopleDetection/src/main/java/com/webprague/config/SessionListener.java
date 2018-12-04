@@ -24,6 +24,9 @@ public class SessionListener implements HttpSessionListener {
     public void sessionDestroyed(HttpSessionEvent se) {
         HttpSession session = se.getSession();
         ServletContext context = session.getServletContext();
-        context.setAttribute("onlineCount", (Integer)context.getAttribute("onlineCount") - 1);
+        Integer subFlag = (Integer)session.getAttribute("sub_flag");
+        if(subFlag == null){
+            context.setAttribute("onlineCount", (Integer)context.getAttribute("onlineCount") - 1);
+        }
     }
 }
