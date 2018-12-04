@@ -1,5 +1,5 @@
 ![](https://img.shields.io/badge/License-Apache%202-yellow.svg)
-# 行人检测系统
+# 基于深度学习的自动化行人检测和监控系统
 [English Document](https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/blob/master/README.md)
 
 监控在安保和巡查中发挥着重要作用，但也是一项非常乏味的任务，深度学习的出现在一定程度上将人类从这一任务中解放出来。本项目基于深度学习的目标检测去搭建了一个简单有效的监控系统，能够自动化进行人流统计和行人检测。
