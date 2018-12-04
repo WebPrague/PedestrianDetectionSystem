@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/License-Apache%202-yellow.svg)
 
 # Automatic pedestrian detection and monitoring system based on Deep Learning
-[中文文档](https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/blob/master/README_zh.md)<br>
+[README](https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/blob/master/README_zh.md)<br>
 
 Monitoring plays an important role in security and inspections, but it is also a very tedious task. The emergence of deep learning has liberated humans from this task to some extent. This project builds a simple and effective monitoring system based on the goal detection of deep learning, which can automate the flow statistics and pedestrian detection. 
 
