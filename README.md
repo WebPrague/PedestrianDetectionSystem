@@ -64,4 +64,4 @@ How to run the system：
 # 0x03 About
 
 - How to support the author: Click on **star** button in the upper right corner is the maximum support of the author；
-- If you have questions or discuss the pedestrian detection algorithm model, please submit an issue,thanks;
+- If you have questions or discuss the pedestrian detection algorithm model, please [submit an issue](https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/issues/new),thanks;
