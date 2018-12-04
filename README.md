@@ -58,6 +58,9 @@ How to run the system：
 - The system is developed based on the IDEA integrated development environment. The dependencies in the SSM framework are all based on Maven configuration. Import the project under the `web` directory in Idea, export the `war` package, and put the `war` package on the server `tomcat/webapps` directory, run `./startup.sh` to start the `tomcat` container
 
 # 0x02 Project Display
+
+![https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/blob/master/img/example2.png]
+![https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/blob/master/img/example1.png]
 - Show the full effect of the pedestrian detection project，[Display link](https://pan.baidu.com/s/1X7BX5QSbqZFx2Y6XElW4ZA)
 
 
