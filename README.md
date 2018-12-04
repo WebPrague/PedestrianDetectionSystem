@@ -59,8 +59,8 @@ How to run the system：
 
 # 0x02 Project Display
 
-![https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/example2.png]
-![https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/example1.png]
+!()[https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/example2.png]
+!()[https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/example1.png]
 - Show the full effect of the pedestrian detection project，[Display link](https://pan.baidu.com/s/1X7BX5QSbqZFx2Y6XElW4ZA)
 
 
