@@ -65,6 +65,8 @@ How to run the system：
 
 <img src="https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/example1.png" width="700" height="400">
 
+<img src="https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/example3.png" width="700" height="400">
+
 - Show the full effect of the pedestrian detection project，[Display link](https://pan.baidu.com/s/1X7BX5QSbqZFx2Y6XElW4ZA);
 
 
