@@ -59,7 +59,7 @@ How to run the system：
 
 # 0x02 Project D
 
-<img src="https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/example2.jpg" width="2584" height="1604">
+<img src="https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/example2.jpg" width="2584" height="1200">
 
 <img src="https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/example1.png" width="2584" height="1604">
 
