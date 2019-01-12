@@ -51,7 +51,7 @@ public class RootConfig implements TransactionManagementConfigurer {
     public SqlSessionFactoryBean initSqlSessionFactory(){
         SqlSessionFactoryBean sqlSessionFactory = new SqlSessionFactoryBean();
         sqlSessionFactory.setDataSource(initDataSource());
-        Resource resource = new ClassPathResource("/mybatis-config.xml");
+        Resource resource = new ClassPathResource("mybatis-config.xml");
         sqlSessionFactory.setConfigLocation(resource);
         return sqlSessionFactory;
     }
@@ -73,7 +73,7 @@ public class RootConfig implements TransactionManagementConfigurer {
         DataSourceTransactionManager transactionManager = new DataSourceTransactionManager();
         transactionManager.setDataSource(initDataSource());
         return transactionManager;
-    }
+}
 
 }
 

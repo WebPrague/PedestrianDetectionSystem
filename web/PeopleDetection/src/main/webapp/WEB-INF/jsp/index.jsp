@@ -12,14 +12,18 @@
     <title>Pedestrian Detection</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-
+    <script src="static/dist/echarts.js"></script>
 </head>
 <body>
 <script type="text/javascript" src="static/js/jquery-2.2.4.min.js"></script>
 <script src="static/js/bootstrap.min.js"></script>
 <script src="static/js/holder.min.js"></script>
 <script src="static/js/popper.min.js"></script>
-<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+
+<div>
+
+
+<div  class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
     <h5 class="my-0 mr-md-auto font-weight-normal">基于行人检测的视频监控系统</h5>
     <nav class="my-2 my-md-0 mr-md-3">
 
@@ -29,6 +33,11 @@
         <button class="btn btn-outline-primary"  type="submit" onclick="signup()">Sign up</button>
     </form>
 </div>
+
+
+
+</div>
+
 <script type="text/javascript" src="static/js/swfobject.js"></script>
 <script type="text/javascript" src="static/js/ParsedQueryString.js"></script>
 <script type="text/javascript">
@@ -172,8 +181,23 @@
                 </div>
             </div>
         </div>
+
     </div>
-<footer class="pt-4 my-md-5 pt-md-5 border-top">
+
+    <hr>
+    <h2 style="text-align: center" >人流统计数据分析</h2>
+    <br>
+    <br>
+    <div >
+    <div id="main_left" style="margin-left:150px; width: 800px;height:400px;"></div>
+
+    <div id="main_right" style="margin-left:150px; width: 800px;height:400px; margin-top: 30px"></div>
+        <br>
+        <br>
+    </div>
+
+
+<footer class="pt-4 my-md-5 pt-md-5 border-top" style="clear: both; margin-top: 40px;">
     <div class="row">
         <div class="col-12 col-md">
             <small class="d-block mb-3 text-muted">Copyright &copy;2018 <a href="http://zhangpeng.ai/">zhangpeng.ai</a>
@@ -208,6 +232,166 @@
 </footer>
 </div>
 <p>
+
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+
+
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main_right'));
+
+        var data_temp = <%=session.getAttribute("monthnum")%>
+
+        option = {
+            title : {
+                text: '大数据量人流统计（月视图）',
+                subtext: '',
+                x:'center'
+            },
+            tooltip : {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            legend: {
+                x : 'center',
+                y : 'bottom',
+                data:['1月','2月','3月','4月','5月','6月','7月','8月', '9月', '10月', '11月', '12月']
+            },
+            toolbox: {
+                show : true,
+                feature : {
+                    mark : {show: true},
+                    dataView : {show: true, readOnly: false},
+                    magicType : {
+                        show: true,
+                        type: ['pie', 'funnel']
+                    },
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                }
+            },
+            calculable : true,
+            series : [
+
+                {
+                    name:'月人流统计表示',
+                    type:'pie',
+                    radius : [50, 150],
+                    center : ['50%', '50%'],
+                    roseType : 'area',
+                    data:[
+                        {value:data_temp[0], name:'1月'},
+                        {value:data_temp[1], name:'2月'},
+                        {value:data_temp[2], name:'3月'},
+                        {value:data_temp[3], name:'4月'},
+                        {value:data_temp[4], name:'5月'},
+                        {value:data_temp[5], name:'6月'},
+                        {value:data_temp[6], name:'7月'},
+                        {value:data_temp[7], name:'8月'},
+                        {value:data_temp[8], name:'9月'},
+                        {value:data_temp[9], name:'10月'},
+                        {value:data_temp[10], name:'11月'},
+                        {value:data_temp[11], name:'12月'}
+                    ]
+                }
+            ]
+        };
+
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+
+
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main_left'));
+
+        var base = +new Date(2018, 11, 1); // 得到月份减1，显示12月，应该写11月
+        var oneDay = 24 * 3600;
+        var date = [];
+
+        var data =  <%=session.getAttribute("daynum")%>; //得到一个月的数据,根据月份*1000 31000
+
+        for (var i = 1; i < 31*1000; i++) { // 判断是该月多少天
+            var now = new Date(base += oneDay);
+            date.push([now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'));
+            data.push(Math.round((Math.random() - 0.5) * 20 + data[i - 1]));
+        }
+
+        option = {
+            tooltip: {
+                trigger: 'axis',
+                position: function (pt) {
+                    return [pt[0], '10%'];
+                }
+            },
+            title: {
+                left: 'center',
+                text: '大数据量人流统计（日统计）',
+            },
+            toolbox: {
+                feature: {
+                    dataZoom: {
+                        yAxisIndex: 'none'
+                    },
+                    restore: {},
+                    saveAsImage: {}
+                }
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: date
+            },
+            yAxis: {
+                type: 'value',
+                boundaryGap: [0, '100%']
+            },
+            dataZoom: [{
+                type: 'inside',
+                start: 0,
+                end: 10
+            }, {
+                start: 0,
+                end: 10,
+                handleIcon: 'M10.7,11.9v-1.3H9.3v1.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4v1.3h1.3v-1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7V23h6.6V24.4z M13.3,19.6H6.7v-1.4h6.6V19.6z',
+                handleSize: '80%',
+                handleStyle: {
+                    color: '#fff',
+                    shadowBlur: 3,
+                    shadowColor: 'rgba(0, 0, 0, 0.6)',
+                    shadowOffsetX: 2,
+                    shadowOffsetY: 2
+                }
+            }],
+            series: [
+                {
+                    name:'日统计',
+                    type:'line',
+                    smooth:true,
+                    symbol: 'none',
+                    sampling: 'average',
+                    itemStyle: {
+                        color: 'rgb(255, 70, 131)'
+                    },
+                    areaStyle: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                            offset: 0,
+                            color: 'rgb(255, 158, 68)'
+                        }, {
+                            offset: 1,
+                            color: 'rgb(255, 70, 131)'
+                        }])
+                    },
+                    data: data
+                }
+            ]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+
     <script type="text/javascript">
         function userSubmit() {
             window.location.reload()

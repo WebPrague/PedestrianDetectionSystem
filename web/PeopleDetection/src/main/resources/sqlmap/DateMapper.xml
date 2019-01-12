@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.webprague.mapper.DateMapper">
+  <resultMap id="DateBaseResultMap" type="com.webprague.model.Date">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="daytime" jdbcType="TIMESTAMP" property="daytime" />
+    <result column="num" jdbcType="INTEGER" property="num" />
+  </resultMap>
+  <sql id="date_Base_Column_List">
+    id, daytime, num
+  </sql>
+
+  <select id="findByDateTime" parameterType="java.sql.Date" resultMap="DateBaseResultMap">
+    select
+    <include refid="date_Base_Column_List" />
+    from date
+    where daytime = #{dateTime, jdbcType=TIMESTAMP}
+  </select>
+
+  <select id="findAllByMonth" resultMap="DateBaseResultMap">
+    select
+    <include refid="date_Base_Column_List" />
+    from date
+    where daytime between #{start_month, jdbcType=TIMESTAMP} and #{end_month, jdbcType=TIMESTAMP}
+  </select>
+
+  <insert id="insert" parameterType="com.webprague.model.Date">
+    insert into date (id, daytime, num
+      )
+    values (#{id,jdbcType=INTEGER}, #{daytime,jdbcType=TIMESTAMP}, #{num,jdbcType=INTEGER}
+      )
+  </insert>
+
+  <update id="updateByPrimaryKey" parameterType="com.webprague.model.Date">
+    update date
+    set daytime = #{daytime,jdbcType=TIMESTAMP},
+      num = #{num,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+</mapper>

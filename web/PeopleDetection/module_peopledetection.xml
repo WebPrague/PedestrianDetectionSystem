@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_peopledetection" default="compile.module.peopledetection">
+  <dirname property="module.peopledetection.basedir" file="${ant.file.module_peopledetection}"/>
+  
+  <property name="module.jdk.home.peopledetection" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.peopledetection" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.peopledetection" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.peopledetection" value="-encoding UTF-8 -source 8 -target 1.8 ${compiler.args}"/>
+  
+  <property name="peopledetection.output.dir" value="${module.peopledetection.basedir}/target/classes"/>
+  <property name="peopledetection.testoutput.dir" value="${module.peopledetection.basedir}/target/test-classes"/>
+  
+  <path id="peopledetection.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="peopledetection.module.production.classpath">
+    <path refid="${module.jdk.classpath.peopledetection}"/>
+    <path refid="library.maven:_javax:javaee-api:7.0.classpath"/>
+    <path refid="library.maven:_com.sun.mail:javax.mail:1.5.0.classpath"/>
+    <path refid="library.maven:_javax.activation:activation:1.1.classpath"/>
+    <path refid="library.maven:_com.mchange:c3p0:0.9.5.2.classpath"/>
+    <path refid="library.maven:_com.mchange:mchange-commons-java:0.2.11.classpath"/>
+    <path refid="library.maven:_org.mybatis:mybatis:3.4.1.classpath"/>
+    <path refid="library.maven:_commons-pool:commons-pool:1.6.classpath"/>
+    <path refid="library.maven:_commons-dbcp:commons-dbcp:1.2.classpath"/>
+    <path refid="library.maven:_commons-collections:commons-collections:2.1.classpath"/>
+    <path refid="library.maven:_xml-apis:xml-apis:1.0.b2.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-core:4.3.5.release.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-beans:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-aop:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-context:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-context-support:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-web:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-webmvc:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-tx:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-jdbc:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-expression:4.3.5.release.classpath"/>
+    <path refid="library.maven:_aopalliance:aopalliance:1.0.classpath"/>
+    <path refid="library.maven:_org.aspectj:aspectjrt:1.8.9.classpath"/>
+    <path refid="library.maven:_org.aspectj:aspectjweaver:1.8.10.classpath"/>
+    <path refid="library.maven:_log4j:log4j:1.2.17.classpath"/>
+    <path refid="library.maven:_commons-fileupload:commons-fileupload:1.3.1.classpath"/>
+    <path refid="library.maven:_commons-io:commons-io:2.2.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-core:2.8.7.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-annotations:2.9.0.classpath"/>
+    <path refid="library.maven:_org.mybatis:mybatis-spring:1.3.1.classpath"/>
+    <path refid="library.maven:_javax.servlet:javax.servlet-api:3.1.0.classpath"/>
+    <path refid="library.maven:_javax.servlet.jsp:javax.servlet.jsp-api:2.3.1.classpath"/>
+    <path refid="library.maven:_javax.servlet:jstl:1.2.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-databind:2.8.7.classpath"/>
+    <path refid="library.maven:_org.hibernate:hibernate-validator:5.2.4.final.classpath"/>
+    <path refid="library.maven:_javax.validation:validation-api:1.1.0.final.classpath"/>
+    <path refid="library.maven:_org.jboss.logging:jboss-logging:3.2.1.final.classpath"/>
+    <path refid="library.maven:_com.fasterxml:classmate:1.1.0.classpath"/>
+    <path refid="library.maven:_org.mybatis.generator:mybatis-generator-core:1.3.2.classpath"/>
+  </path>
+  
+  <path id="peopledetection.runtime.production.module.classpath">
+    <pathelement location="${peopledetection.output.dir}"/>
+    <path refid="library.maven:_javax:javaee-api:7.0.classpath"/>
+    <path refid="library.maven:_com.sun.mail:javax.mail:1.5.0.classpath"/>
+    <path refid="library.maven:_javax.activation:activation:1.1.classpath"/>
+    <path refid="library.maven:_mysql:mysql-connector-java:5.1.41.classpath"/>
+    <path refid="library.maven:_com.mchange:c3p0:0.9.5.2.classpath"/>
+    <path refid="library.maven:_com.mchange:mchange-commons-java:0.2.11.classpath"/>
+    <path refid="library.maven:_org.mybatis:mybatis:3.4.1.classpath"/>
+    <path refid="library.maven:_commons-pool:commons-pool:1.6.classpath"/>
+    <path refid="library.maven:_commons-dbcp:commons-dbcp:1.2.classpath"/>
+    <path refid="library.maven:_commons-collections:commons-collections:2.1.classpath"/>
+    <path refid="library.maven:_xml-apis:xml-apis:1.0.b2.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-core:4.3.5.release.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-beans:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-aop:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-context:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-context-support:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-web:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-webmvc:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-tx:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-jdbc:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-expression:4.3.5.release.classpath"/>
+    <path refid="library.maven:_aopalliance:aopalliance:1.0.classpath"/>
+    <path refid="library.maven:_org.aspectj:aspectjrt:1.8.9.classpath"/>
+    <path refid="library.maven:_org.aspectj:aspectjweaver:1.8.10.classpath"/>
+    <path refid="library.maven:_log4j:log4j:1.2.17.classpath"/>
+    <path refid="library.maven:_commons-fileupload:commons-fileupload:1.3.1.classpath"/>
+    <path refid="library.maven:_commons-io:commons-io:2.2.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-core:2.8.7.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-annotations:2.9.0.classpath"/>
+    <path refid="library.maven:_org.mybatis:mybatis-spring:1.3.1.classpath"/>
+    <path refid="library.maven:_javax.servlet:javax.servlet-api:3.1.0.classpath"/>
+    <path refid="library.maven:_javax.servlet.jsp:javax.servlet.jsp-api:2.3.1.classpath"/>
+    <path refid="library.maven:_javax.servlet:jstl:1.2.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-databind:2.8.7.classpath"/>
+    <path refid="library.maven:_org.hibernate:hibernate-validator:5.2.4.final.classpath"/>
+    <path refid="library.maven:_javax.validation:validation-api:1.1.0.final.classpath"/>
+    <path refid="library.maven:_org.jboss.logging:jboss-logging:3.2.1.final.classpath"/>
+    <path refid="library.maven:_com.fasterxml:classmate:1.1.0.classpath"/>
+    <path refid="library.maven:_org.mybatis.generator:mybatis-generator-core:1.3.2.classpath"/>
+  </path>
+  
+  <path id="peopledetection.module.classpath">
+    <path refid="${module.jdk.classpath.peopledetection}"/>
+    <pathelement location="${peopledetection.output.dir}"/>
+    <path refid="library.maven:_junit:junit:4.12.classpath"/>
+    <path refid="library.maven:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+    <path refid="library.maven:_javax:javaee-api:7.0.classpath"/>
+    <path refid="library.maven:_com.sun.mail:javax.mail:1.5.0.classpath"/>
+    <path refid="library.maven:_javax.activation:activation:1.1.classpath"/>
+    <path refid="library.maven:_mysql:mysql-connector-java:5.1.41.classpath"/>
+    <path refid="library.maven:_com.mchange:c3p0:0.9.5.2.classpath"/>
+    <path refid="library.maven:_com.mchange:mchange-commons-java:0.2.11.classpath"/>
+    <path refid="library.maven:_org.mybatis:mybatis:3.4.1.classpath"/>
+    <path refid="library.maven:_commons-pool:commons-pool:1.6.classpath"/>
+    <path refid="library.maven:_commons-dbcp:commons-dbcp:1.2.classpath"/>
+    <path refid="library.maven:_commons-collections:commons-collections:2.1.classpath"/>
+    <path refid="library.maven:_xml-apis:xml-apis:1.0.b2.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-core:4.3.5.release.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-beans:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-aop:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-context:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-context-support:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-web:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-webmvc:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-tx:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-jdbc:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-expression:4.3.5.release.classpath"/>
+    <path refid="library.maven:_aopalliance:aopalliance:1.0.classpath"/>
+    <path refid="library.maven:_org.aspectj:aspectjrt:1.8.9.classpath"/>
+    <path refid="library.maven:_org.aspectj:aspectjweaver:1.8.10.classpath"/>
+    <path refid="library.maven:_log4j:log4j:1.2.17.classpath"/>
+    <path refid="library.maven:_commons-fileupload:commons-fileupload:1.3.1.classpath"/>
+    <path refid="library.maven:_commons-io:commons-io:2.2.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-core:2.8.7.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-annotations:2.9.0.classpath"/>
+    <path refid="library.maven:_org.mybatis:mybatis-spring:1.3.1.classpath"/>
+    <path refid="library.maven:_javax.servlet:javax.servlet-api:3.1.0.classpath"/>
+    <path refid="library.maven:_javax.servlet.jsp:javax.servlet.jsp-api:2.3.1.classpath"/>
+    <path refid="library.maven:_javax.servlet:jstl:1.2.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-test:4.3.5.release.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-databind:2.8.7.classpath"/>
+    <path refid="library.maven:_org.hibernate:hibernate-validator:5.2.4.final.classpath"/>
+    <path refid="library.maven:_javax.validation:validation-api:1.1.0.final.classpath"/>
+    <path refid="library.maven:_org.jboss.logging:jboss-logging:3.2.1.final.classpath"/>
+    <path refid="library.maven:_com.fasterxml:classmate:1.1.0.classpath"/>
+    <path refid="library.maven:_org.mybatis.generator:mybatis-generator-core:1.3.2.classpath"/>
+  </path>
+  
+  <path id="peopledetection.runtime.module.classpath">
+    <pathelement location="${peopledetection.testoutput.dir}"/>
+    <pathelement location="${peopledetection.output.dir}"/>
+    <path refid="library.maven:_junit:junit:4.12.classpath"/>
+    <path refid="library.maven:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+    <path refid="library.maven:_javax:javaee-api:7.0.classpath"/>
+    <path refid="library.maven:_com.sun.mail:javax.mail:1.5.0.classpath"/>
+    <path refid="library.maven:_javax.activation:activation:1.1.classpath"/>
+    <path refid="library.maven:_mysql:mysql-connector-java:5.1.41.classpath"/>
+    <path refid="library.maven:_com.mchange:c3p0:0.9.5.2.classpath"/>
+    <path refid="library.maven:_com.mchange:mchange-commons-java:0.2.11.classpath"/>
+    <path refid="library.maven:_org.mybatis:mybatis:3.4.1.classpath"/>
+    <path refid="library.maven:_commons-pool:commons-pool:1.6.classpath"/>
+    <path refid="library.maven:_commons-dbcp:commons-dbcp:1.2.classpath"/>
+    <path refid="library.maven:_commons-collections:commons-collections:2.1.classpath"/>
+    <path refid="library.maven:_xml-apis:xml-apis:1.0.b2.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-core:4.3.5.release.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-beans:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-aop:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-context:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-context-support:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-web:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-webmvc:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-tx:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-jdbc:4.3.5.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-expression:4.3.5.release.classpath"/>
+    <path refid="library.maven:_aopalliance:aopalliance:1.0.classpath"/>
+    <path refid="library.maven:_org.aspectj:aspectjrt:1.8.9.classpath"/>
+    <path refid="library.maven:_org.aspectj:aspectjweaver:1.8.10.classpath"/>
+    <path refid="library.maven:_log4j:log4j:1.2.17.classpath"/>
+    <path refid="library.maven:_commons-fileupload:commons-fileupload:1.3.1.classpath"/>
+    <path refid="library.maven:_commons-io:commons-io:2.2.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-core:2.8.7.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-annotations:2.9.0.classpath"/>
+    <path refid="library.maven:_org.mybatis:mybatis-spring:1.3.1.classpath"/>
+    <path refid="library.maven:_javax.servlet:javax.servlet-api:3.1.0.classpath"/>
+    <path refid="library.maven:_javax.servlet.jsp:javax.servlet.jsp-api:2.3.1.classpath"/>
+    <path refid="library.maven:_javax.servlet:jstl:1.2.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-test:4.3.5.release.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-databind:2.8.7.classpath"/>
+    <path refid="library.maven:_org.hibernate:hibernate-validator:5.2.4.final.classpath"/>
+    <path refid="library.maven:_javax.validation:validation-api:1.1.0.final.classpath"/>
+    <path refid="library.maven:_org.jboss.logging:jboss-logging:3.2.1.final.classpath"/>
+    <path refid="library.maven:_com.fasterxml:classmate:1.1.0.classpath"/>
+    <path refid="library.maven:_org.mybatis.generator:mybatis-generator-core:1.3.2.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.peopledetection">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.peopledetection">
+    <patternset refid="excluded.from.module.peopledetection"/>
+  </patternset>
+  
+  <path id="peopledetection.module.sourcepath">
+    <dirset dir="${module.peopledetection.basedir}">
+      <include name="src/main/java"/>
+      <include name="src/main/resources"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.peopledetection" depends="compile.module.peopledetection.production,compile.module.peopledetection.tests" description="Compile module PeopleDetection"/>
+  
+  <target name="compile.module.peopledetection.production" depends="register.custom.compilers" description="Compile module PeopleDetection; production classes">
+    <mkdir dir="${peopledetection.output.dir}"/>
+    <javac2 destdir="${peopledetection.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.peopledetection}/javac">
+      <compilerarg line="${compiler.args.peopledetection}"/>
+      <bootclasspath refid="peopledetection.module.bootclasspath"/>
+      <classpath refid="peopledetection.module.production.classpath"/>
+      <src refid="peopledetection.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.peopledetection"/>
+    </javac2>
+    
+    <copy todir="${peopledetection.output.dir}">
+      <fileset dir="${module.peopledetection.basedir}/src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.peopledetection.basedir}/src/main/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.peopledetection.tests" depends="register.custom.compilers,compile.module.peopledetection.production" description="compile module PeopleDetection; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.peopledetection" description="cleanup module">
+    <delete dir="${peopledetection.output.dir}"/>
+    <delete dir="${peopledetection.testoutput.dir}"/>
+  </target>
+</project>

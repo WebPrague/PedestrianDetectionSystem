@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="peopledetection" default="all">
+  
+  
+  <property file="peopledetection.properties"/>
+  <!-- Uncomment the following property if no tests compilation is needed -->
+  <!-- 
+  <property name="skip.tests" value="true"/>
+   -->
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="700m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/*.hprof/**"/>
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/*.rbc/**"/>
+    <exclude name="**/*.yarb/**"/>
+    <exclude name="**/*~/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/__pycache__/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/vssver.scc/**"/>
+    <exclude name="**/vssver2.scc/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.egg"/>
+    <include name="*.jar"/>
+    <include name="*.ear"/>
+    <include name="*.swc"/>
+    <include name="*.war"/>
+    <include name="*.zip"/>
+    <include name="*.ane"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <exclude name="**/?*.java"/>
+    <exclude name="**/?*.form"/>
+    <exclude name="**/?*.class"/>
+    <exclude name="**/?*.groovy"/>
+    <exclude name="**/?*.scala"/>
+    <exclude name="**/?*.flex"/>
+    <exclude name="**/?*.kt"/>
+    <exclude name="**/?*.clj"/>
+    <exclude name="**/?*.aj"/>
+  </patternset>
+  
+  <!-- JDK definitions -->
+  
+  <property name="jdk.bin.1.8" value="${jdk.home.1.8}/bin"/>
+  <path id="jdk.classpath.1.8">
+    <fileset dir="${jdk.home.1.8}">
+      <include name="jre/lib/charsets.jar"/>
+      <include name="jre/lib/deploy.jar"/>
+      <include name="jre/lib/ext/cldrdata.jar"/>
+      <include name="jre/lib/ext/dnsns.jar"/>
+      <include name="jre/lib/ext/jaccess.jar"/>
+      <include name="jre/lib/ext/jfxrt.jar"/>
+      <include name="jre/lib/ext/localedata.jar"/>
+      <include name="jre/lib/ext/nashorn.jar"/>
+      <include name="jre/lib/ext/sunec.jar"/>
+      <include name="jre/lib/ext/sunjce_provider.jar"/>
+      <include name="jre/lib/ext/sunpkcs11.jar"/>
+      <include name="jre/lib/ext/zipfs.jar"/>
+      <include name="jre/lib/javaws.jar"/>
+      <include name="jre/lib/jce.jar"/>
+      <include name="jre/lib/jfr.jar"/>
+      <include name="jre/lib/jfxswt.jar"/>
+      <include name="jre/lib/jsse.jar"/>
+      <include name="jre/lib/management-agent.jar"/>
+      <include name="jre/lib/plugin.jar"/>
+      <include name="jre/lib/resources.jar"/>
+      <include name="jre/lib/rt.jar"/>
+      <include name="lib/ant-javafx.jar"/>
+      <include name="lib/dt.jar"/>
+      <include name="lib/javafx-mx.jar"/>
+      <include name="lib/jconsole.jar"/>
+      <include name="lib/packager.jar"/>
+      <include name="lib/sa-jdi.jar"/>
+      <include name="lib/tools.jar"/>
+    </fileset>
+  </path>
+  
+  <property name="project.jdk.home" value="${jdk.home.1.8}"/>
+  <property name="project.jdk.bin" value="${jdk.bin.1.8}"/>
+  <property name="project.jdk.classpath" value="jdk.classpath.1.8"/>
+  
+  
+  <!-- Project Libraries -->
+  
+  <path id="library.maven:_aopalliance:aopalliance:1.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/aopalliance/aopalliance/1.0/aopalliance-1.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_com.fasterxml.jackson.core:jackson-annotations:2.9.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_com.fasterxml.jackson.core:jackson-core:2.8.7.classpath">
+    <pathelement location="${path.variable.maven_repository}/com/fasterxml/jackson/core/jackson-core/2.8.7/jackson-core-2.8.7.jar"/>
+  </path>
+  
+  <path id="library.maven:_com.fasterxml.jackson.core:jackson-databind:2.8.7.classpath">
+    <pathelement location="${path.variable.maven_repository}/com/fasterxml/jackson/core/jackson-databind/2.8.7/jackson-databind-2.8.7.jar"/>
+  </path>
+  
+  <path id="library.maven:_com.fasterxml:classmate:1.1.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/com/fasterxml/classmate/1.1.0/classmate-1.1.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_com.mchange:c3p0:0.9.5.2.classpath">
+    <pathelement location="${path.variable.maven_repository}/com/mchange/c3p0/0.9.5.2/c3p0-0.9.5.2.jar"/>
+  </path>
+  
+  <path id="library.maven:_com.mchange:mchange-commons-java:0.2.11.classpath">
+    <pathelement location="${path.variable.maven_repository}/com/mchange/mchange-commons-java/0.2.11/mchange-commons-java-0.2.11.jar"/>
+  </path>
+  
+  <path id="library.maven:_com.sun.mail:javax.mail:1.5.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/com/sun/mail/javax.mail/1.5.0/javax.mail-1.5.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_commons-collections:commons-collections:2.1.classpath">
+    <pathelement location="${path.variable.maven_repository}/commons-collections/commons-collections/2.1/commons-collections-2.1.jar"/>
+  </path>
+  
+  <path id="library.maven:_commons-dbcp:commons-dbcp:1.2.classpath">
+    <pathelement location="${path.variable.maven_repository}/commons-dbcp/commons-dbcp/1.2/commons-dbcp-1.2.jar"/>
+  </path>
+  
+  <path id="library.maven:_commons-fileupload:commons-fileupload:1.3.1.classpath">
+    <pathelement location="${path.variable.maven_repository}/commons-fileupload/commons-fileupload/1.3.1/commons-fileupload-1.3.1.jar"/>
+  </path>
+  
+  <path id="library.maven:_commons-io:commons-io:2.2.classpath">
+    <pathelement location="${path.variable.maven_repository}/commons-io/commons-io/2.2/commons-io-2.2.jar"/>
+  </path>
+  
+  <path id="library.maven:_commons-logging:commons-logging:1.2.classpath">
+    <pathelement location="${path.variable.maven_repository}/commons-logging/commons-logging/1.2/commons-logging-1.2.jar"/>
+  </path>
+  
+  <path id="library.maven:_commons-pool:commons-pool:1.6.classpath">
+    <pathelement location="${path.variable.maven_repository}/commons-pool/commons-pool/1.6/commons-pool-1.6.jar"/>
+  </path>
+  
+  <path id="library.maven:_javax.activation:activation:1.1.classpath">
+    <pathelement location="${path.variable.maven_repository}/javax/activation/activation/1.1/activation-1.1.jar"/>
+  </path>
+  
+  <path id="library.maven:_javax.servlet.jsp:javax.servlet.jsp-api:2.3.1.classpath">
+    <pathelement location="${path.variable.maven_repository}/javax/servlet/jsp/javax.servlet.jsp-api/2.3.1/javax.servlet.jsp-api-2.3.1.jar"/>
+  </path>
+  
+  <path id="library.maven:_javax.servlet:javax.servlet-api:3.1.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_javax.servlet:jstl:1.2.classpath">
+    <pathelement location="${path.variable.maven_repository}/javax/servlet/jstl/1.2/jstl-1.2.jar"/>
+  </path>
+  
+  <path id="library.maven:_javax.validation:validation-api:1.1.0.final.classpath">
+    <pathelement location="${path.variable.maven_repository}/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar"/>
+  </path>
+  
+  <path id="library.maven:_javax:javaee-api:7.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/javax/javaee-api/7.0/javaee-api-7.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_junit:junit:4.12.classpath">
+    <pathelement location="${path.variable.maven_repository}/junit/junit/4.12/junit-4.12.jar"/>
+  </path>
+  
+  <path id="library.maven:_log4j:log4j:1.2.17.classpath">
+    <pathelement location="${path.variable.maven_repository}/log4j/log4j/1.2.17/log4j-1.2.17.jar"/>
+  </path>
+  
+  <path id="library.maven:_mysql:mysql-connector-java:5.1.41.classpath">
+    <pathelement location="${path.variable.maven_repository}/mysql/mysql-connector-java/5.1.41/mysql-connector-java-5.1.41.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.aspectj:aspectjrt:1.8.9.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/aspectj/aspectjrt/1.8.9/aspectjrt-1.8.9.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.aspectj:aspectjweaver:1.8.10.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/aspectj/aspectjweaver/1.8.10/aspectjweaver-1.8.10.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.hamcrest:hamcrest-core:1.3.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.hibernate:hibernate-validator:5.2.4.final.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/hibernate/hibernate-validator/5.2.4.Final/hibernate-validator-5.2.4.Final.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.jboss.logging:jboss-logging:3.2.1.final.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/jboss/logging/jboss-logging/3.2.1.Final/jboss-logging-3.2.1.Final.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.mybatis.generator:mybatis-generator-core:1.3.2.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/mybatis/generator/mybatis-generator-core/1.3.2/mybatis-generator-core-1.3.2.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.mybatis:mybatis-spring:1.3.1.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/mybatis/mybatis-spring/1.3.1/mybatis-spring-1.3.1.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.mybatis:mybatis:3.4.1.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/mybatis/mybatis/3.4.1/mybatis-3.4.1.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-aop:4.3.5.release.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/springframework/spring-aop/4.3.5.RELEASE/spring-aop-4.3.5.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-beans:4.3.5.release.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/springframework/spring-beans/4.3.5.RELEASE/spring-beans-4.3.5.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-context-support:4.3.5.release.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/springframework/spring-context-support/4.3.5.RELEASE/spring-context-support-4.3.5.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-context:4.3.5.release.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/springframework/spring-context/4.3.5.RELEASE/spring-context-4.3.5.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-core:4.3.5.release.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/springframework/spring-core/4.3.5.RELEASE/spring-core-4.3.5.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-expression:4.3.5.release.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/springframework/spring-expression/4.3.5.RELEASE/spring-expression-4.3.5.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-jdbc:4.3.5.release.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/springframework/spring-jdbc/4.3.5.RELEASE/spring-jdbc-4.3.5.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-test:4.3.5.release.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/springframework/spring-test/4.3.5.RELEASE/spring-test-4.3.5.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-tx:4.3.5.release.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/springframework/spring-tx/4.3.5.RELEASE/spring-tx-4.3.5.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-web:4.3.5.release.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/springframework/spring-web/4.3.5.RELEASE/spring-web-4.3.5.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-webmvc:4.3.5.release.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/springframework/spring-webmvc/4.3.5.RELEASE/spring-webmvc-4.3.5.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_xml-apis:xml-apis:1.0.b2.classpath">
+    <pathelement location="${path.variable.maven_repository}/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar"/>
+  </path>
+  
+  
+  <!-- Application Server Libraries -->
+  <!-- Register Custom Compiler Taskdefs -->
+  <property name="javac2.home" value="${idea.home}/lib"/>
+  <path id="javac2.classpath">
+    <fileset dir="${javac2.home}">
+      <include name="javac2.jar"/>
+      <include name="jdom.jar"/>
+      <include name="asm-all*.jar"/>
+      <include name="forms-*.jar"/>
+    </fileset>
+  </path>
+  <target name="register.custom.compilers">
+    <taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="javac2.classpath"/>
+    <taskdef name="instrumentIdeaExtensions" classname="com.intellij.ant.InstrumentIdeaExtensions" classpathref="javac2.classpath"/>
+  </target>
+  
+  <!-- Modules -->
+  
+  <import file="${basedir}/module_peopledetection.xml"/>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.peopledetection, clean.artifact.peopledetection:war_exploded" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.module.peopledetection" description="build all modules"/>
+  
+  <target name="init.artifacts">
+    <property name="artifacts.temp.dir" value="${basedir}/__artifacts_temp"/>
+    <property name="artifact.output.peopledetection:war" value="${basedir}/target"/>
+    <property name="artifact.output.peopledetection:war_exploded" value="${basedir}/target/PeopleDetection"/>
+    <mkdir dir="${artifacts.temp.dir}"/>
+    <property name="temp.jar.path.PeopleDetection.war" value="${artifacts.temp.dir}/PeopleDetection.war"/>
+  </target>
+  
+  <target name="clean.artifact.peopledetection:war_exploded" description="clean PeopleDetection:war exploded artifact output">
+    <delete dir="${artifact.output.peopledetection:war_exploded}"/>
+  </target>
+  
+  <target name="artifact.peopledetection:war" depends="init.artifacts, artifact.peopledetection:war_exploded" description="Build &#39;PeopleDetection:war&#39; artifact">
+    <property name="artifact.temp.output.peopledetection:war" value="${artifacts.temp.dir}/PeopleDetection_war"/>
+    <mkdir dir="${artifact.temp.output.peopledetection:war}"/>
+    <zip destfile="${temp.jar.path.PeopleDetection.war}">
+      <zipfileset dir="${artifact.output.peopledetection:war_exploded}"/>
+    </zip>
+    <copy file="${temp.jar.path.PeopleDetection.war}" tofile="${artifact.temp.output.peopledetection:war}/PeopleDetection.war"/>
+  </target>
+  
+  <target name="artifact.peopledetection:war_exploded" depends="init.artifacts, compile.module.peopledetection" description="Build &#39;PeopleDetection:war exploded&#39; artifact">
+    <mkdir dir="${artifact.output.peopledetection:war_exploded}"/>
+    <mkdir dir="${artifact.output.peopledetection:war_exploded}/WEB-INF"/>
+    <mkdir dir="${artifact.output.peopledetection:war_exploded}/WEB-INF/classes"/>
+    <copy todir="${artifact.output.peopledetection:war_exploded}/WEB-INF/classes">
+      <fileset dir="${peopledetection.output.dir}"/>
+    </copy>
+    <mkdir dir="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib"/>
+    <copy file="${path.variable.maven_repository}/javax/javaee-api/7.0/javaee-api-7.0.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/javaee-api-7.0.jar"/>
+    <copy file="${path.variable.maven_repository}/com/sun/mail/javax.mail/1.5.0/javax.mail-1.5.0.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/javax.mail-1.5.0.jar"/>
+    <copy file="${path.variable.maven_repository}/javax/activation/activation/1.1/activation-1.1.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/activation-1.1.jar"/>
+    <copy file="${path.variable.maven_repository}/mysql/mysql-connector-java/5.1.41/mysql-connector-java-5.1.41.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/mysql-connector-java-5.1.41.jar"/>
+    <copy file="${path.variable.maven_repository}/com/mchange/c3p0/0.9.5.2/c3p0-0.9.5.2.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/c3p0-0.9.5.2.jar"/>
+    <copy file="${path.variable.maven_repository}/com/mchange/mchange-commons-java/0.2.11/mchange-commons-java-0.2.11.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/mchange-commons-java-0.2.11.jar"/>
+    <copy file="${path.variable.maven_repository}/org/mybatis/mybatis/3.4.1/mybatis-3.4.1.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/mybatis-3.4.1.jar"/>
+    <copy file="${path.variable.maven_repository}/commons-pool/commons-pool/1.6/commons-pool-1.6.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/commons-pool-1.6.jar"/>
+    <copy file="${path.variable.maven_repository}/commons-dbcp/commons-dbcp/1.2/commons-dbcp-1.2.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/commons-dbcp-1.2.jar"/>
+    <copy file="${path.variable.maven_repository}/commons-collections/commons-collections/2.1/commons-collections-2.1.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/commons-collections-2.1.jar"/>
+    <copy file="${path.variable.maven_repository}/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/xml-apis-1.0.b2.jar"/>
+    <copy file="${path.variable.maven_repository}/org/springframework/spring-core/4.3.5.RELEASE/spring-core-4.3.5.RELEASE.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/spring-core-4.3.5.RELEASE.jar"/>
+    <copy file="${path.variable.maven_repository}/commons-logging/commons-logging/1.2/commons-logging-1.2.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/commons-logging-1.2.jar"/>
+    <copy file="${path.variable.maven_repository}/org/springframework/spring-beans/4.3.5.RELEASE/spring-beans-4.3.5.RELEASE.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/spring-beans-4.3.5.RELEASE.jar"/>
+    <copy file="${path.variable.maven_repository}/org/springframework/spring-aop/4.3.5.RELEASE/spring-aop-4.3.5.RELEASE.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/spring-aop-4.3.5.RELEASE.jar"/>
+    <copy file="${path.variable.maven_repository}/org/springframework/spring-context/4.3.5.RELEASE/spring-context-4.3.5.RELEASE.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/spring-context-4.3.5.RELEASE.jar"/>
+    <copy file="${path.variable.maven_repository}/org/springframework/spring-context-support/4.3.5.RELEASE/spring-context-support-4.3.5.RELEASE.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/spring-context-support-4.3.5.RELEASE.jar"/>
+    <copy file="${path.variable.maven_repository}/org/springframework/spring-web/4.3.5.RELEASE/spring-web-4.3.5.RELEASE.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/spring-web-4.3.5.RELEASE.jar"/>
+    <copy file="${path.variable.maven_repository}/org/springframework/spring-webmvc/4.3.5.RELEASE/spring-webmvc-4.3.5.RELEASE.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/spring-webmvc-4.3.5.RELEASE.jar"/>
+    <copy file="${path.variable.maven_repository}/org/springframework/spring-tx/4.3.5.RELEASE/spring-tx-4.3.5.RELEASE.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/spring-tx-4.3.5.RELEASE.jar"/>
+    <copy file="${path.variable.maven_repository}/org/springframework/spring-jdbc/4.3.5.RELEASE/spring-jdbc-4.3.5.RELEASE.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/spring-jdbc-4.3.5.RELEASE.jar"/>
+    <copy file="${path.variable.maven_repository}/org/springframework/spring-expression/4.3.5.RELEASE/spring-expression-4.3.5.RELEASE.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/spring-expression-4.3.5.RELEASE.jar"/>
+    <copy file="${path.variable.maven_repository}/aopalliance/aopalliance/1.0/aopalliance-1.0.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/aopalliance-1.0.jar"/>
+    <copy file="${path.variable.maven_repository}/org/aspectj/aspectjrt/1.8.9/aspectjrt-1.8.9.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/aspectjrt-1.8.9.jar"/>
+    <copy file="${path.variable.maven_repository}/org/aspectj/aspectjweaver/1.8.10/aspectjweaver-1.8.10.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/aspectjweaver-1.8.10.jar"/>
+    <copy file="${path.variable.maven_repository}/log4j/log4j/1.2.17/log4j-1.2.17.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/log4j-1.2.17.jar"/>
+    <copy file="${path.variable.maven_repository}/commons-fileupload/commons-fileupload/1.3.1/commons-fileupload-1.3.1.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/commons-fileupload-1.3.1.jar"/>
+    <copy file="${path.variable.maven_repository}/commons-io/commons-io/2.2/commons-io-2.2.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/commons-io-2.2.jar"/>
+    <copy file="${path.variable.maven_repository}/com/fasterxml/jackson/core/jackson-core/2.8.7/jackson-core-2.8.7.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/jackson-core-2.8.7.jar"/>
+    <copy file="${path.variable.maven_repository}/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/jackson-annotations-2.9.0.jar"/>
+    <copy file="${path.variable.maven_repository}/org/mybatis/mybatis-spring/1.3.1/mybatis-spring-1.3.1.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/mybatis-spring-1.3.1.jar"/>
+    <copy file="${path.variable.maven_repository}/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/javax.servlet-api-3.1.0.jar"/>
+    <copy file="${path.variable.maven_repository}/javax/servlet/jsp/javax.servlet.jsp-api/2.3.1/javax.servlet.jsp-api-2.3.1.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/javax.servlet.jsp-api-2.3.1.jar"/>
+    <copy file="${path.variable.maven_repository}/javax/servlet/jstl/1.2/jstl-1.2.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/jstl-1.2.jar"/>
+    <copy file="${path.variable.maven_repository}/com/fasterxml/jackson/core/jackson-databind/2.8.7/jackson-databind-2.8.7.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/jackson-databind-2.8.7.jar"/>
+    <copy file="${path.variable.maven_repository}/org/hibernate/hibernate-validator/5.2.4.Final/hibernate-validator-5.2.4.Final.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/hibernate-validator-5.2.4.Final.jar"/>
+    <copy file="${path.variable.maven_repository}/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/validation-api-1.1.0.Final.jar"/>
+    <copy file="${path.variable.maven_repository}/org/jboss/logging/jboss-logging/3.2.1.Final/jboss-logging-3.2.1.Final.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/jboss-logging-3.2.1.Final.jar"/>
+    <copy file="${path.variable.maven_repository}/com/fasterxml/classmate/1.1.0/classmate-1.1.0.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/classmate-1.1.0.jar"/>
+    <copy file="${path.variable.maven_repository}/org/mybatis/generator/mybatis-generator-core/1.3.2/mybatis-generator-core-1.3.2.jar" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/lib/mybatis-generator-core-1.3.2.jar"/>
+    <mkdir dir="${artifact.output.peopledetection:war_exploded}/META-INF"/>
+    <copy file="${basedir}/target/PeopleDetection/META-INF/MANIFEST.MF" tofile="${artifact.output.peopledetection:war_exploded}/META-INF/MANIFEST.MF"/>
+    <copy todir="${artifact.output.peopledetection:war_exploded}">
+      <fileset dir="${basedir}/src/main/webapp"/>
+    </copy>
+    <mkdir dir="${artifact.output.peopledetection:war_exploded}/WEB-INF"/>
+    <copy file="${basedir}/src/main/webapp/WEB-INF/web.xml" tofile="${artifact.output.peopledetection:war_exploded}/WEB-INF/web.xml"/>
+  </target>
+  
+  <target name="build.all.artifacts" depends="artifact.peopledetection:war, artifact.peopledetection:war_exploded" description="Build all artifacts">
+    <mkdir dir="${artifact.output.peopledetection:war}"/>
+    <copy todir="${artifact.output.peopledetection:war}">
+      <fileset dir="${artifact.temp.output.peopledetection:war}"/>
+    </copy>
+    
+    <!-- Delete temporary files -->
+    <delete dir="${artifacts.temp.dir}"/>
+  </target>
+  
+  <target name="all" depends="build.modules, build.all.artifacts" description="build all"/>
+</project>

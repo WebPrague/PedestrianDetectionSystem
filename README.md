@@ -67,6 +67,10 @@ How to run the system：
 
 <img src="https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/example3.jpg" width="700" height="400">
 
+- Added visual view of human flow statistics for large data volumes；
+
+<img src="https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/example4.png" width="700" height="400">
+
 - Show the full effect of the pedestrian detection project，[Display link](https://pan.baidu.com/s/1X7BX5QSbqZFx2Y6XElW4ZA);
 
 

@@ -4,9 +4,9 @@
 
 <generatorConfiguration>
 
-    <properties resource="generator.properties" />
+    <properties resource="generator.properties"/>
 
-    <classPathEntry location="D:\repository\mysql\mysql-connector-java\5.1.41\mysql-connector-java-5.1.41.jar" />
+    <classPathEntry location="/Users/zhangpeng/.m2/repository/mysql/mysql-connector-java/5.1.41/mysql-connector-java-5.1.41.jar" />
 
     <context id="contex1">
         <commentGenerator>
