@@ -33,7 +33,7 @@ The system relies on the following:
 | TensorFlow-1.11.0-GPU | Skip |
 | Python version - OpenCV | Skip |
 | requests | pip3 install requests |
-| frozen_inference_graph.pb | [Download Link](https://download.csdn.net/download/huplion/10825557) |
+| frozen_inference_graph.pb | [Download Link](https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/releases/download/v1.0/frozen_inference_graph.pb) |
 | Nginx with RTMP | [Installation Process](https://www.jianshu.com/p/b4ee6956d1ea) |
 
 How to run the system：
