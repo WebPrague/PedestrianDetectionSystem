@@ -88,8 +88,8 @@
 # 0x05 后记
 这个项目我为研一上学期JavaWeb课程的大作业所写的项目,实际核心部分所用时间为一个星期.<br>
 至于为什么JavaWeb课程写了这个一个非主流的项目,因为不想写某某管理系统这种烂大街的项目,因此想写一个新颖的项目,正在找灵感的时候,恰好这时候某个公众号推了了一篇文章,觉得比较有意思,于是萌发了写一个视频行人检测项目的想法.<br>
-在这个项目里面服务端使用了基于TF框架的这个项目[Pedestrian-Detection](https://github.com/thatbrguy/Pedestrian-Detection),使用了[FFmpeg](https://github.com/FFmpeg/FFmpeg)框架进行推/拉流,使用了[Nginx](https://github.com/nginx/nginx)分发视频流,使用Python调用以上框架进行调用.<br>
-Android调用了[RtmpRecoder](https://github.com/beautifulSoup/RtmpRecoder),在这个项目的基础了进行了一些薄封装.<br>
+在这个项目里面服务端使用了基于TF框架的这个项目[Pedestrian-Detection](https://github.com/thatbrguy/Pedestrian-Detection),使用了[FFmpeg](https://github.com/FFmpeg/FFmpeg)框架进行推/拉流,使用了[Nginx](https://github.com/nginx/nginx)分发视频流,使用Python整合以上框架进行调用.<br>
+Android端的实现使用了[RtmpRecoder](https://github.com/beautifulSoup/RtmpRecoder),在这个项目的基础了进行了一些薄封装.<br>
 在此对以上开源项目表示感谢.<br>
 最后使用JavaWeb套了一层壳最后完成了此大作业.<br>
 由于我研究生阶段的方向并不是图像方向,因此本项目不再更新.<br>
