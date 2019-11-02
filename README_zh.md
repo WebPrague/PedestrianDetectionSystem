@@ -100,4 +100,6 @@ Android端的实现使用了[RtmpRecoder](https://github.com/beautifulSoup/RtmpR
 由于我研究生阶段的方向并不是图像方向,因此本项目不再更新.<br>
 最近看到一篇公众号文章
 [声网：基于 TensorFlow 在实时音视频中实现图像识别](https://mp.weixin.qq.com/s/HlJQ1d10vzi9jAO3ZHOg0w)
-
+虽然他们晚了一年，但是在实现上很类似：
+<img src="https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/example5.png" width="700" height="400">
+<img src="https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/example6.jpg" width="700" height="400">
