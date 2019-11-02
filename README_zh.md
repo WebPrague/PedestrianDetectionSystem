@@ -11,6 +11,11 @@
 - 2.基于Android平台的推流系统
 - 3.基于JavaWeb的展示系统
 
+总体框架如下图所示:
+
+<img src="https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/framework.png" width="700" height="600">
+
+
 # 0x01 服务器部署
 ## 1.服务器的配置要求
 | 配置        | 基本要求 |

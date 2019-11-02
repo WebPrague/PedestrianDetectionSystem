@@ -13,6 +13,10 @@ The system consists of the following three sub-projects: <br>
 - 2.Push flow system based on Android platform
 - 3.JavaWeb-based display system
 
+The overall framework is shown below:
+
+<img src="https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/framework.png" width="700" height="600">
+
 # 0x01 Server Deployment
 ## 1.Server configuration requirements
 | Configuration        | Basic requirements |
