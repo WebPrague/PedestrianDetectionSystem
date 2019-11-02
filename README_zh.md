@@ -93,3 +93,6 @@ Android端的实现使用了[RtmpRecoder](https://github.com/beautifulSoup/RtmpR
 在此对以上开源项目表示感谢.<br>
 最后使用JavaWeb套了一层壳最后完成了此大作业.<br>
 由于我研究生阶段的方向并不是图像方向,因此本项目不再更新.<br>
+最近看到一篇公众号文章
+[声网：基于 TensorFlow 在实时音视频中实现图像识别](https://mp.weixin.qq.com/s/HlJQ1d10vzi9jAO3ZHOg0w)
+
