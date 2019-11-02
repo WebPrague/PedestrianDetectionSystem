@@ -13,7 +13,7 @@
 
 总体框架如下图所示:
 
-<img src="https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/framework.png" width="400" height="400">
+<img src="https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/framework.png" width="400" height="300">
 
 
 # 0x01 服务器部署
