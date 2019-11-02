@@ -13,7 +13,7 @@
 
 总体框架如下图所示:
 
-<img src="https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/framework.png" width="700" height="600">
+<img src="https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/framework.png" width="400" height="300">
 
 
 # 0x01 服务器部署
@@ -73,7 +73,7 @@
 
 - 新增了针对大数据量的人流统计的可视化视图；
 
-<img src="https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/example4.png" width="400" height="300">
+<img src="https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/example4.png" width="700" height="600">
 
 - 展示行人检测项目完整效果，[点击此链接](https://pan.baidu.com/s/1X7BX5QSbqZFx2Y6XElW4ZA)；
 
