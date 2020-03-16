@@ -104,3 +104,4 @@ Android端的实现使用了[RtmpRecoder](https://github.com/beautifulSoup/RtmpR
 <img src="https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/example5.png" width="700" height="700"><br>
 以下是我们一年前实现的：<br>
 <img src="https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/example6.jpg" width="700" height="700">
+至于说为什么英文README文档没有更新了，那就是作者太懒了，欢迎提交PR，本人会即时确认后合并。
