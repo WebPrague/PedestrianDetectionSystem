@@ -36,7 +36,7 @@
 | TensorFlow-1.11.0-GPU | 略 |
 | Python版本OpenCV | 略 |
 | requests | pip3 install requests |
-| frozen_inference_graph.pb | [下载地址](https://download.csdn.net/download/huplion/10825557) |
+| frozen_inference_graph.pb | [下载地址](https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/releases/download/v1.0/frozen_inference_graph.pb) |
 | Nginx with RTMP | [安装流程](https://www.jianshu.com/p/b4ee6956d1ea) |
 
 运行系统：
