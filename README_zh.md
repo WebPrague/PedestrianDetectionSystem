@@ -91,9 +91,9 @@
 > A: Demo项目,不适合部署于生产环境.<br>
 
 ### Q: 数据库sql文件的问题
-> A: 当时忘记备份这个文件了，就把操作系统整个重装了。因此这个文件就没留下来。
-但是我们要秉持自己动手，丰衣足食的光荣传统，反正就2个表，10个左右的字段，可以自己用一些可视化的数据库管理工具设计一下就行。
-但是这个我们也会提上日程的，在2020年10月1日之前我们尽量会补上这个sql文件。
+> A: 提供一个数据库恢复文件，[blog.sql.zip](https://github.com/MaisyZhang/PedestrianDetectionSystem/files/10836897/blog.sql.zip)，
+> 需要提前创建一个mysql数据库名为blog,修改 PedestrianDetectionSystem/web/PeopleDetection/src/main/resources/generator.properties 和 PedestrianDetectionSystem/web/PeopleDetection/src/main/java/com/webprague/config/RootConfig.java 其中关于数据库的地址，数据库账号和密码的配置。
+
 
 ### Q: 行人统计功能的问题
 > A: 演示界面上面的行人流量统计是直接往数据库里面加的假数据。仅仅为了提交大作业的时候美观一点？？😂
@@ -108,10 +108,4 @@ Android端的实现使用了[RtmpRecoder](https://github.com/beautifulSoup/RtmpR
 在此对以上开源项目表示感谢.<br>
 最后使用JavaWeb套了一层壳最后完成了此大作业.<br>
 由于我研究生阶段的方向并不是图像方向,因此本项目不再更新.<br>
-最近看到一篇公众号文章
-[声网：基于 TensorFlow 在实时音视频中实现图像识别](https://mp.weixin.qq.com/s/HlJQ1d10vzi9jAO3ZHOg0w)
-虽然他们晚了一年，但是在实现上很类似：<br>
-<img src="https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/example5.png" width="700" height="700"><br>
-以下是我们一年前实现的：<br>
-<img src="https://github.com/zhangpengpengpeng/PedestrianDetectionSystem/raw/master/img/example6.jpg" width="700" height="700">
 <br>至于说为什么英文README文档没有更新了，那就是作者太懒了，欢迎提交PR，本人会即时确认后合并。
